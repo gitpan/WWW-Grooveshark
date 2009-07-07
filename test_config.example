@@ -1,0 +1,10 @@
+# Copy or rename this file to 'test_config' and it will be read during testing
+
+# Uncomment and specify to run tests requiring a session
+# $api_key = 'deadbeef';
+
+# Uncomment and specify to run tests requiring user authentication
+# $user = 'bob';
+# $pass = 'secret';
+
+1;

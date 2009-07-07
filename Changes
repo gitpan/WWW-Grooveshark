@@ -1,0 +1,33 @@
+Revision history for WWW::Grooveshark
+=====================================
+
+July 7, 2009
+------------
+ * improved documentation significantly
+ * "discovered" a few undocumented API methods using the sandbox tool
+ * releasing version 0.01
+
+July 6, 2009
+------------
+ * added the autoplay, playlist, user, and the rest of the song API methods to
+   WWW::Grooveshark
+ * note: encountered some server-side errors during testing of playlist
+   methods
+
+July 4, 2009
+------------
+ * added the popular, session, and most of the song API methods to
+   WWW::Grooveshark
+
+July 3, 2009
+------------
+ * added AUTOLOADing to WWW::Grooveshark::Response and improved documentation
+ * added the search, album, and artist API methods to WWW::Grooveshark
+
+July 1, 2009
+------------
+ * created WWW::Grooveshark::Response to encapsulate API responses
+
+June 26, 2009
+-------------
+ * original version created
