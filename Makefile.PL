@@ -8,6 +8,7 @@ WriteMakefile(
 	LICENSE          => 'perl',
 	META_MERGE       => {resources =>
 		{
+			bugtracker => 'http://rt.cpan.org/Public/Dist/Display.html?Name=WWW-Grooveshark',
 			repository => 'http://elementsofpuzzle.googlecode.com/',
 		}},
 	MIN_PERL_VERSION => '5.006',
@@ -19,5 +20,6 @@ WriteMakefile(
 			JSON::Any      => 0,
 			LWP::UserAgent => 0,
 			NEXT           => 0.61,
+			URI::Escape    => 0,
 		},
 );

@@ -10,16 +10,18 @@ WWW::Grooveshark::Response - Grooveshark API response message
 
 =head1 VERSION
 
-This document describes C<WWW::Grooveshark::Response> version 0.01
-(July 7, 2009).
+This document describes C<WWW::Grooveshark::Response> version 0.02 (July 22,
+2009).
 
 This module is distributed with L<WWW::Grooveshark> and therefore takes its
 version from that module.  The latest version of both components is hosted on
-Google Code as part of <http://elementsofpuzzle.googlecode.com/>.
+Google Code as part of <http://elementsofpuzzle.googlecode.com/>.  Significant
+changes are also contributed to CPAN:
+http://search.cpan.org/dist/WWW-Grooveshark/.
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 $VERSION = eval $VERSION;
 
 =head1 SYNOPSIS
@@ -158,6 +160,13 @@ sub AUTOLOAD {
 
 # provided to appease AUTOLOAD
 sub DESTROY {}
+
+#=head1 OVERLOADED OPERATIONS
+#
+#=cut
+use overload
+	'bool' => sub { return !shift->is_fault; },
+;
 
 =head1 METHODS
 
@@ -358,8 +367,11 @@ L<WWW::Grooveshark>
 
 =head1 BUGS
 
-Please report them!  Create an issue at
-L<http://elementsofpuzzle.googlecode.com/> or drop me an e-mail.
+Please report them!  The preferred way to submit a bug report for this module
+is through CPAN's bug tracker:
+http://rt.cpan.org/Public/Dist/Display.html?Name=WWW-Grooveshark.  You may
+also create an issue at http://elementsofpuzzle.googlecode.com/ or drop me an
+e-mail.
 
 =head1 AUTHOR
 

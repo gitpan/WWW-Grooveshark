@@ -1,7 +1,16 @@
-WWW::Grooveshark version 0.01
+WWW::Grooveshark version 0.02
 =============================
 
-Some module is a very interesting piece of software.
+Grooveshark is an internationally-available online music search, streaming,
+and recommendation service.  WWW::Grooveshark wraps this service's API in
+an object-oriented Perl interface, allowing you to programmatically search
+for songs, artists, albums, or playlists; browse popular music; get song
+recommendations; manage playlists; and more.
+
+This version wraps a few more API methods, fixes some documentation errors,
+and increases laziness potential: response objects can be used as booleans
+to check if an API call was successful and WWW::Grooveshark objects will
+end their session, if any, when garbage collected.
 
 INSTALLATION
 
@@ -38,6 +47,7 @@ This module requires the following other modules:
   JSON::Any
   LWP::UserAgent
   NEXT (at least version 0.61)
+  URI::Escape
 
 CONTACT
 

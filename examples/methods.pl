@@ -16,10 +16,9 @@ $r = $gs->session_start(apiKey => $api_key) or do {
 	exit(1);
 };
 
-for($gs->search_songs(query => "The Beatles", limit => 10)->songs) {
-	printf("%s", $_->{songName});
-	printf(" by %s", $_->{artistName});
-	printf(" on %s", $_->{albumName});
-	printf(" <%s>\n", $_->{liteUrl});
+my @methods = $gs->service_getMethods->methods;
+for(sort {$a->{method} cmp $b->{method}} @methods) {
+	my $method_name = $_->{method};
+	my @parameters = @{$_->{parameters}};
+	printf("%s(%s)\n", $method_name, join(", ", @parameters));
 }
-
